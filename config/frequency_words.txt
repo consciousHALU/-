@@ -1,5 +1,5 @@
 # ═══════════════════════════════════════════════════════════════
-#                    TrendRadar 频率词配置文件
+#                    TrendRadar 频率词配置文件# TrendRadar Frequency Word Configuration File
 # ═══════════════════════════════════════════════════════════════
 # 凡是左侧有 # 的都是仅供阅读的说明性文字
 #
@@ -23,7 +23,7 @@
 #   震惊              直接写词，包含"震惊"的新闻会被过滤
 #   /赌博|博彩/       用 /.../ 包裹可以匹配多个词（用 | 分隔）
 
-[GLOBAL_FILTER]
+[GLOBAL_FILTER]   (GLOBAL_FILTER)[全局筛选]  （全局筛选）[GLOBAL_FILTER] (GLOBAL_FILTER) [Global Filter]  (Global Filter)[全局筛选]  (全局筛选)[GLOBAL_FILTER]  (GLOBAL_FILTER) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局
 # 过滤标题党
 震惊
 
@@ -34,7 +34,8 @@
 # ───────────────────────────────────────────────────────────────
 # 在这里写入你想关注的关键词。
 # 每个词组用空行分隔，同一词组内的关键词是"或"的关系。
-#
+[乳业]
+/蒙牛|伊利|光明|君乐宝|三元|现代牧业|妙可蓝多|乳业|乳制品/ => 乳业
 # ┌─────────────────────────────────────────────────────────────┐
 # │                      语法总览（快速参考）                      │
 # └─────────────────────────────────────────────────────────────┘
@@ -102,7 +103,311 @@
 #
 # 5. 精确匹配英文单词（避免误匹配）
 #    ────────────────────
-#    /\bAI\b/i => AI
+#    /\bAI\b/i => AI# 正则表达式 /\bAI\b/i 匹配到 AI 时 => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches "AI", it results in => AI# 正则表达式 /\bAI\b/iAI" 时 => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches "AI", it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches "AI" => AI# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI# 正则表达式 /\bAI\b/i 匹配到 AI 时 => AI# 正则表达式 /\bAI\b/i 匹配到 AI 时 => AI# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches "AI", it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches "AI" => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches " AI" => The regular expression /\bAI\b/i matches the string " AI" Time => When the regular expression /\bAI\b/i matches "AI", it results in => When the regular expression /\bAI\b/i matches "AI", it results in => The regular expression /\bAI\b/i matches the string "AI". AI" Time => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI当正则表达式 /\bAI\b/i AI" 时 => 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时 => 当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI"  时 => AI 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI 正则表达式 /\bAI\b/i 匹配 时 => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches "AI", it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => AI# Regular expression: /\bAI\b/iAI" Time => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches " AI" => The regular expression /\bAI\b/i matches the string "AI". AI" Time => When the regular expression /\bAI\b/i matches "AI", it results in => When the regular expression /\bAI\b/i matches "AI", it results in => The regular expression /\bAI\b/i matches the string "AI". AI" Time => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches " AI" => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => AI#    /\bAI\b/i => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches " AI" => The regular expression /\bAI\b/i matches the string " AI" Time => When the regular expression /\bAI\b/i matches " AI" , it results in => When the regular expression /\bAI\b/i matches " AI" , it results in => The regular expression /\bAI\b/i matches the string " AI" . AI" Time => The AI regular expression /\bAI\b/i matches the string " AI" Time => The AI regular expression /\bAI\b/i matches the string " AI" Time => The AI regular expression /\bAI\b/i matches the string " AI" Time => The regular expression for "AI" is /\bAI\b/i. Time => The regular expression /\bAI\b/i matches the string " AI" Time => When the regular expression /\bAI\b/i matches the string " AI" When the regular expression /\bAI\b/i matches the string, the result is => AI" When the result is => The regular expression /\bAI\b/i matches the string " AI"  Time => The regular expression for AI, /\bAI\b/i, matches the string """. AI" Time => The regular expression for AI in JavaScript is /\bAI\b/i. When it matches, it results in: => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配时，结果为 => AI# 正则表达 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 " AI" 时，结果为 => AI# 正则表达正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配。AI" Time => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI"。AI" Time => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i AI" 时，这导致了 => AI#    /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时 => 正则表达式 /\bAI\b/i 匹配 时间 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i AI" 时，这导致了 => 正则表达式 /\bAI\b/i AI" 。AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配 时间 => AI 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配AI" 的正则表达式是 /\bAI\b/i 。时间 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时间 => 当正则表达式 /\bAI\b/i 匹配字符串 "AI" 时 当正则表达式 /\bAI\b/i 匹配字符串时，结果为 => "AI" 结果为 => 正则表达式 /\bAI\b/iAI" 时间 => JavaScript 中用于匹配 AI 的正则表达式为 /\bAI\b/i。当它匹配时，结果为： => "AI" 时间 => 正则表达式 /\bAI\b/i 匹配到 ""AI" 时 => "AI" 时间 => 在 JavaScript 中，用于匹配 AI 的正则表达式是 /\bAI\b/i。当它匹配时，结果为： => "AI"
+正则表达式 /\bAI\b/i 匹配AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配时，结果为 => AI# 正则表达 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 " AI" 时，结果为 => AI# 正则表达正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配。AI" Time => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI"。AI" Time => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 =>这导致了 => AI#    /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时 => 正则表达式 /\bAI\b/i AI" 时间 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 正则表达式 /\bAI\b/i AI" 。AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配 时间 => AI 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时间 => "AI" 的正则表达式是 /\bAI\b/i 。时间 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时间 => 当正则表达式 /\bAI\b/i 匹配字符串 "AI" 时 当正则表达式 /\bAI\b/i 匹配字符串时，结果为 => "AI" 当结果为 => 正则表达式 /\bAI\b/iAI" 时 时间 => JavaScript 中用于匹配 AI 的正则表达式为 /\bAI\b/i。当它匹配时，结果为： => "AI" 时间 => 正则表达式 /\bAI\b/iAI" 时 => "AI" 时间 => 在 JavaScript 中，用于匹配 AI 的正则表达式为 /\bAI\b/i。当它匹配时，结果为： => "AI"
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AIThe regular expression `/\bAI\b/i` matches the string "AI". Time => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AIThe regular expression `/\bAI\b/i` matches the string "AI". Time => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配时，结果为 => AI# 正则表达 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 " AI" 时，结果为 => AI# 正则表达正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配。AI" Time => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 当正则表达式 /\bAI\b/iAI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配。AI" Time => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 =>这导致了 => AI#    /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时 => 正则表达式 /\bAI\b/i AI" 时间 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i AI" 时，这导致了 => 正则表达式 /\bAI\b/i AI" 。AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配 时间 => AI 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配AI" 的正则表达式是 /\bAI\b/i 。时间 => 正则表达式 /\bAI\b/iAI" 时 时间 => 当正则表达式 /\bAI\b/i 匹配字符串 "AI" 时 当正则表达式 /\bAI\b/i 匹配字符串时，结果为 => "AI" 当结果为 => 正则表达式 /\bAI\b/iAI" 时 时间 => 用于匹配 AI 的正则表达式 /\bAI\b/iAI" 时 时间 => 在 JavaScript 中，用于匹配 AI 的正则表达式是 /\bAI\b/i。当它匹配时，结果为： => "AI"
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配到 "AI" 时，结果为 => AI 正则表达式 /\bAI\b/i 匹配时，结果为 => AI# 正则表达 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配到 " AI" 时，结果为 => AI# 正则表达正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配。AI" Time => 当正则表达式 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/i 匹配 "AI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI"。AI" Time => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，结果为 => 当正则表达式 /\bAI\b/i AI" 时，结果为 => AI# 正则表达式 /\bAI\b/i => 当正则表达式 /\bAI\b/i AI" 时，这导致了 => AI#    /\bAI\b/i => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时 => 正则表达式 /\bAI\b/i AI" 时间 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 当正则表达式 /\bAI\b/i 匹配 " AI" 时，这导致了 => 正则表达式 /\bAI\b/i AI" 。AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配 时间 => AI 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时间 => AI 正则表达式 /\bAI\b/i 匹配AI" 的正则表达式是 /\bAI\b/i 。时间 => 正则表达式 /\bAI\b/i AI" 时间 => 当正则表达式 /\bAI\b/i 匹配字符串 " AI" 时 当正则表达式 /\bAI\b/i 匹配字符串时，结果为 => "AI" 时间 => 正则表达式 /\bAI\b/i 匹配  " AI" 时间 => 在 JavaScript 中，用于匹配 AI 的正则表达式是 /\bAI\b/i。当它匹配时，结果为： => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches "AI". Time => AIThe regular expression /\bAI\b/i matches " AI" . Time => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/iAI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/iAI" 时，结果为：正则表达式 /\bAI\b/i 匹配了。AI 正则表达式 /\bAI\b/i 匹配 时。AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AI
+正则表达式 /\bAI\b/i 匹配AI" 时 => AIThe regular expression /\bAI\b/i matches "AI". Time => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\bAI\b/i 匹配 时 => AI
+正则表达式 /\当正则表达式 /\bAI\b/i AI" 时 => 当正则表达式 /\bAI\b/i AI" 时 => 正则表达式 /\bAI\b/i 匹配字符串 " AI" 时 时间 => 当正则表达式 /\bAI\b/iAI" 时，结果为 => 当正则表达式 /\bAI\b/iAI" 时，结果为 => 正则表达式 /\bAI\b/i 匹配字符串 "AI" 时。AI" 时间 => AI
+# 正则表达式 /\bAI\b/i 匹配 时 => AI
+# 正则表达式 /\bAI\b/i 匹配 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AIWhen the regular expression `/\bAI\b/i` matches `"AI"` => AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AIWhen the regular expression `/\bAI\b/i` matches `"AI"` => AIWhen the regular expression `/\bAI\b/i` matches `" AI" ` => The AI regular expression `/\bAI\b/i` matches `"` ； AI" ； "时" in this context is a Chinese character that can be translated as "time" or "hour". However AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"； AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；；AI"；；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"； AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；；AI"；；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"； AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `" AI"` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `" AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AIWhen the regular expression `/\bAI\b/i` matches `"AI"` => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/i
+# 正则表达式 /\bAI\b/i 匹配AI" 时 => AIWhen the regular expression /\bAI\b/i matches "AI" => AI
+# 正则表达式 /\bAI\b/i 匹配到 " AI" 时 => 当正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配AI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 AI 时 => AI
+# 正则表达式 /\bAI\b/i 匹配AI" 时 => AIWhen the regular expression /\bAI\b/i matches "AI" => AI
+# 正则表达式 /\bAI\b/i 匹配到 " AI" 时 => 当正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配 时 => AI
+# 正则表达式 /\bAI\b/i 匹配 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 " AI" 时 => 当正则表达式 /\bAI\b/iAI" 时 => AI
+# 正则表达式 /\bAI\b/i 匹配到 "AI" 时 => AI
+# 正则表达式 /\bAI\b/iAI" 时 => AIWhen the regular expression `/\bAI\b/i` matches `"AI"` => AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AIWhen the regular expression `/\bAI\b/i` matches `"AI"` => AIWhen the regular expression `/\bAI\b/i` matches `" AI" ` => The AI regular expression `/\bAI\b/i` matches `"` ； AI" ； "时" in this context is a Chinese character that can be translated as "time" or "hour". However AI正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AIThe regular expression `/\bAI\b/i` matches `"` AI" ； "时" can be translated as "time" in English. However， since the provided text seems incomplete and only AI
+正则表达式 `/\bAI\b/i` 匹配 `"； AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `" AI"` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `" AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"；AI"；` 时 => AI
+正则表达式 `/\bAI\b/i` 匹配 `"AI"；` 时 => AI
+正则表达式 `/\
 #
 #    说明：\b 表示单词边界，避免匹配到 "MAIL" 中的 "AI"
 #          /i 表示忽略大小写，"ai"、"AI"、"Ai" 都能匹配
@@ -140,10 +445,10 @@
 #
 #    效果：必须同时包含"苹果"和"发布会"才匹配
 #    说明：+ 开头的词表示"必须包含"
-#
+#正则表达式 `/\bAI\b/i` 匹配 `"；AI"；；` 时 => AIThe regular expression `/\bAI\b/i` matches `"` ； AI" ；； "时" in this context is a placeholder or symbol， and it doesn't have a direct translation. If you AI
 # ───────────────────────────────────────────────────────────────
 
-[WORD_GROUPS]
+[WORD_GROUPS]   (WORD_GROUPS)[词组]  （词组）[WORD_GROUPS] (WORD_GROUPS) [phrases]  (phrases)[词组]  (词组)[WORD_GROUPS] (WORD_GROUPS) [短语] 
 
 # ═══════════════════════════════════════════════════════════════
 #                         企业与品牌
@@ -151,9 +456,9 @@
 
 /胖东来|于东来/ => 胖东来
 
-/DeepSeek|梁文锋/i => DeepSeek
+/DeepSeek|梁文锋/i => DeepSeek/DeepSeek|Liang Wenfeng/i => DeepSeek
 
-/华为|鸿蒙|HarmonyOS|任正非/i => 华为
+/华为|鸿蒙|HarmonyOS|任正非/i => 华为Huawei
 
 /比亚迪|王传福|byd/i => 比亚迪
 
@@ -174,7 +479,7 @@
 
 /京东|刘强东/ => 京东
 
-/字节|bytedance|张一鸣/i => 字节跳动
+/字节|bytedance|张一鸣/i => 字节跳动/byte|bytedance|Zhang Yiming/i => ByteDance
 
 /qwen|minimax|glm/ => 国产开源模型
 
@@ -221,7 +526,7 @@
 #                         科技领域
 # ═══════════════════════════════════════════════════════════════
 
-[AI 相关]
+[AI 相关]/\bclaude\b|anthropic/i => 克劳德[AI related]/\bclaude\b|anthropic/i => ClaudeClaude [AI related]/\bclaude\b|anthropic/i => Claude
 /(?<![a-zA-Z])ai(?![a-zA-Z])/i
 人工智能
 
@@ -230,7 +535,7 @@
 光刻机
 半导体
 
-/水电|雅鲁藏布江/ => 水电
+/水电|雅鲁藏布江/ => 水电/qwen|minimax|glm/ => Domestic open-source models
 /光伏|太阳能/ => 光伏
 核能
 能源
