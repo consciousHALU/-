@@ -23,7 +23,7 @@
 #   震惊              直接写词，包含"震惊"的新闻会被过滤
 #   /赌博|博彩/       用 /.../ 包裹可以匹配多个词（用 | 分隔）
 
-[GLOBAL_FILTER]   (GLOBAL_FILTER)[全局筛选]  （全局筛选）[GLOBAL_FILTER] (GLOBAL_FILTER) [Global Filter]  (Global Filter)[全局筛选]  (全局筛选)[GLOBAL_FILTER]  (GLOBAL_FILTER) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局
+[GLOBAL_FILTER]   (GLOBAL_FILTER)[全局筛选]  （全局筛选）[GLOBAL_FILTER] (GLOBAL_FILTER) [Global Filter]  (Global Filter)[全局筛选]  (全局筛选)[GLOBAL_FILTER]  (GLOBAL_FILTER) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局[Global Filter]  (Global Filter) [全局筛选]  (全局
 # 过滤标题党
 震惊
 
@@ -36,6 +36,9 @@
 # 每个词组用空行分隔，同一词组内的关键词是"或"的关系。
 [乳业]
 /蒙牛|伊利|光明|君乐宝|三元|现代牧业|妙可蓝多|乳业|乳制品/ => 乳业
+段永平
+[数据合规]
+/个人信息|隐私|数据安全|网络安全|数据合规/ => 数据合规
 # ┌─────────────────────────────────────────────────────────────┐
 # │                      语法总览（快速参考）                      │
 # └─────────────────────────────────────────────────────────────┘
