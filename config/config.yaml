@@ -1,20 +1,20 @@
 # ═══════════════════════════════════════════════════════════════
-#                    TrendRadar 配置文件
+#                    TrendRadar 配置文件# TrendRadar Configuration File# TrendRadar Configuration File
 # ═══════════════════════════════════════════════════════════════
 
 
 # ===============================================================
 # 1. 基础设置
 # ===============================================================
-app:
+app   应用::
   # 时区配置（影响所有时间显示、推送窗口判断、数据存储）
   # 常用时区：
-  #   - Asia/Shanghai (北京时间 UTC+8)
-  #   - America/New_York (美东时间 UTC-5/-4)
-  #   - Europe/London (伦敦时间 UTC+0/+1)
-  # 完整时区列表: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  timezone: "Asia/Shanghai"
-  show_version_update: true           # 显示版本更新提示
+  #   - Asia/Shanghai (Beijing Time UTC+8)#   - Asia/Shanghai (北京时间 UTC+8)
+  # - America/New_York (Eastern Time in the United States, UTC-5/-4)#   - America/New_York (美东时间 UTC-5/-4)
+  #   - Europe/London (London Time UTC 0/1)#   - Europe/London (伦敦时间 UTC+0/+1)
+  # Complete list of time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones# 完整时区列表: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezonetimezone: "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai"   "Asia/Shanghai": "Asia/Shanghai"
+  show_version_updateshow_version_update: true           # Display version update prompt: true           # 显示版本更新提示
 
 
 # ===============================================================
@@ -25,14 +25,14 @@ app:
 #   - id: 平台唯一标识（勿修改）
 #   - name: 显示名称（可自定义，修改后不影响运行）
 # ===============================================================
-platforms:
-  enabled: true                         # 是否启用热榜平台抓取
-  sources:
-    - id: "toutiao"
+platforms   平台::
+  enabledenabled   启用: true                         # Whether to enable the hot list platform crawl: true                         # 是否启用热榜平台抓取
+  sources   来源::
+    -    - id: "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"   "toutiao"id: "toutiao"
       name: "今日头条"
-    - id: "baidu"
+    -    - id: "baidu"id: "baidu"
       name: "百度热搜"
-    - id: "wallstreetcn-hot"
+    -    - id: "wallstreetcn-hot"id: "wallstreetcn-hot"
       name: "华尔街见闻"
     - id: "thepaper"
       name: "澎湃新闻"
@@ -169,27 +169,27 @@ display:
 
   # 推送区域开关
   # 控制各区域是否启用（配合 region_order 使用）
-  regions:
+  regions   区域::
     hotlist: true                     # 热榜区域（关键词匹配的热点新闻）
-    new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
+    new_itemsnew_items: true                   # New hotspots (including new entries on the hot list and new RSS feeds): true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: true                         # RSS 订阅区域
+    rssrss: true                         # RSS subscription area: true                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
-    standalone: false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
-    ai_analysis: true                 # AI 分析区域
+    standalonestandalone: false                 # Independent display area ( tornado/RSS, not subject to keyword filtering ): false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
+    ai_analysisai_analysis: true                 # AI analysis area: true                 # AI 分析区域
 
-  # 📋 独立展示区配置（仅在 regions.standalone: true 时生效）
+  # 📋 Standalone Display Area Configuration (Effective Only When regions.standalone: true)# 📋 独立展示区配置（仅在 regions.standalone: true 时生效）
   # 用途：将指定平台的完整热榜/RSS 单独展示，不受关键词过滤影响
   # 适用场景：
   #   - 想完整查看某个平台的热榜排名
   #   - RSS 源内容较少，希望全部展示而非只显示关键词匹配的
   # 注意：同一新闻可能同时出现在关键词匹配区和独立展示区
-  standalone:
-    platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
+  standalone   独立::
+    platformsplatforms: []  # List of hot topic platform IDs (e.g. ["zhihu", "weibo"]) ）: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feedsrss_feeds: []                     # List of RSS source IDs (e.g. ["hacker-news"]) ）: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
@@ -200,8 +200,8 @@ display:
 #
 # 🔴 请务必妥善保管好 webhooks，不要公开!!!
 # 🔴 如果你以 fork 的方式部署在 GitHub 上，请勿在此填写
-# 🔴 而是将 webhooks 填入 GitHub Secrets
-#    (Settings → Secrets and variables → Actions)
+# 🔴 而是将 webhooks 填入 GitHub SecretsInstead, fill in the webhooks in GitHub Secrets.Instead, fill in the webhooks in GitHub Secrets.
+#    (Settings → Secrets and variables → Actions)（设置 &rarr； 密钥和变量 &rarr； 操作）（设置 &rarr； 密钥和变量 &rarr； 操作）
 # 🔴 否则：
 #    - 轻则：手机上收到大量垃圾广告推送
 #    - 重则：webhook 被滥用造成严重安全隐患
@@ -209,60 +209,63 @@ display:
 # 📌 多账号支持说明
 #
 # • 使用分号(;)分隔多个账号，如："url1;url2;url3"
-# • 需要配对的配置（如 Telegram 的 token 和 chat_id）数量必须一致
-# • 每个渠道最多支持 max_accounts_per_channel 个账号
+# • 需要配对的配置（如 Telegram 的 token 和 chat_id）数量必须一致# • The number of configuration pairs to be matched (such as Telegram's token and chat_id) must be consistent.# • The number of configuration pairs to be matched (such as Telegram's token and chat_id) must be consistent.
+# • 每个渠道最多支持 max_accounts_per_channel 个账号# • Each channel supports a maximum of max_accounts_per_channel accounts.# • Each channel supports a maximum of max_accounts_per_channel accounts.
 # • 邮箱已支持多收件人（逗号分隔）
 # ===============================================================
-notification:
-  enabled: true                       # 是否启用通知功能
+notification   通知   通知:   通知:
+  enabledenabled   启用: true                       # Whether to enable the notification   通知 function: true                       # 是否启用通知功能
 
   # 🕐 推送时间窗口控制（可选功能）
   # 用途：限制推送的时间范围，避免非工作时间打扰
   # 适用场景：
   #   • 只想在工作日白天接收推送（如 09:00-18:00）
   #   • 希望在晚上固定时间收到汇总（如 20:00-22:00）
-  # ⚠️ GitHub Actions 用户注意：
+  # ⚠️ Note for GitHub Actions Users:# ⚠️ GitHub Actions 用户注意：# ⚠️ Note for GitHub Actions Users:
   #   执行时间不稳定，时间范围建议至少留足 2 小时
   # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
   push_window:
-    enabled: false                    # 是否启用推送时间窗口控制
-    start: "20:00"                    # 开始时间（北京时间）
-    end: "22:00"                      # 结束时间（北京时间）
-    once_per_day: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
+    enabled   启用: true                    # 是否启用推送时间窗口控制
+    start   开始: "6:00"   “20:00"                    # 开始时间（北京时间）
+    end   结束: "22:00"   “22:00"                      # 结束时间（北京时间）
+    once_per_dayonce_per_day: true                # true = Only push once within the window, false = Push every time it is executed within the window: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
 
   # 推送渠道配置
-  channels:
-    feishu:
-      webhook_url: ""                 # 飞书机器人 webhook URL
+  channels   渠道:   渠道:
+    feishu   作用:
+      webhook_urlwebhook_url: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                 # Feishu Robot Webhook URL: ""                 # 飞书机器人 webhook URL
 
     dingtalk:
-      webhook_url: ""                 # 钉钉机器人 webhook URL
+      webhook_urlwebhook_url: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                 # DingTalk Robot Webhook URL: ""                 # 钉钉机器人 webhook URL
 
     wework:
-      webhook_url: ""                 # 企业微信机器人 webhook URL
-      msg_type: "markdown"            # 消息类型：markdown(群机器人) | text(个人微信应用)
+      webhook_urlwebhook_url: " "   ““                 Enterprise WeChat Bot Webhook URL: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                 # 企业微信机器人 webhook URL   Enterprise WeChat Bot Webhook URL
+      msg_typemsg_type: " markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"   "markdown"            # Message Type: markdown (Group Robot) | text (Personal WeChat App): "markdown"            # 消息类型：markdown(群机器人) | text(个人微信应用)
 
-    telegram:
-      bot_token: ""                   # Telegram Bot Token
-      chat_id: ""                     # Telegram Chat ID
+    telegram   电报:   电报:
+      bot_tokenbot_token: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                   # 电报机器人令牌: ""                   # Telegram Bot Token
+      chat_id聊天 ID： ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                     # 电报聊天 ID: ""                     # Telegram Chat ID
 
-    email:
-      from: ""                        # 发件人邮箱地址
-      password: ""                    # 发件人邮箱密码或授权码
-      to: ""                          # 收件人邮箱，多个用逗号分隔
-      smtp_server: ""                 # SMTP 服务器（可选，留空自动识别）
-      smtp_port: ""                   # SMTP 端口（可选，留空自动识别）
+    email   电子邮件:   电子邮件:
+      from   从: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                        # 发件人邮箱地址
+      password   密码: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                    # 发件人邮箱密码或授权码
+      to   来: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                          # 收件人邮箱，多个用逗号分隔
+      smtp_serversmtp_server: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                 # SMTP Server (Optional, leave blank for automatic detection): ""                 # SMTP 服务器（可选，留空自动识别）
+      smtp_portsmtp_port: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                   # SMTP Port (Optional, leave blank for automatic detection): ""                   # SMTP 端口（可选，留空自动识别）
 
     ntfy:
-      server_url: "https://ntfy.sh"   # ntfy 服务器地址（可改为自托管）
-      topic: ""                       # ntfy 主题名称
-      token: ""                       # ntfy 访问令牌（可选，用于私有主题）
+      server_urlserver_url: " https:/
+tfy.sh"   # ntfy server address (can be changed to self-hosted): "https://ntfy.sh   "https:/tfy.sh"   # ntfy server address (can be changed to self-hosted): " https:/
+tfy.sh"   # ntfy server address (can be changed to self-hosted)
+tfy.sh""   # ntfy 服务器地址（可改为自托管）
+      topictopic   主题: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                       # ntfy Topic Name: ""                       # ntfy 主题名称
+      token   令牌: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                       # ntfy 访问令牌（可选，用于私有主题）
 
-    bark:
-      url: ""                         # Bark 推送 URL（格式：https://api.day.app/your_device_key）
+    bark   树皮:   树皮:
+      urlurl: " "   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                         # Bark Push URL (Format: https://api.day.app/your_device_key): ""                         # Bark 推送 URL（格式：https://api.day.app/your_device_key）
 
-    slack:
-      webhook_url: ""                 # Slack Incoming Webhook URL
+    slack   松:   松弛:
+      webhook_urlwebhook_url: ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""   ""                 # 来信集成的 Slack 网络钩子 URL: ""                 # Slack Incoming Webhook URL
 
     generic_webhook:
       webhook_url: ""                 # 通用 Webhook URL（支持 Discord、Matrix、IFTTT 等）
